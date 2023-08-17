@@ -1,0 +1,138 @@
+html{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+h2, h3 {
+    color: deeppink;
+    font-size: 30px;
+}
+
+/* ******* General styling immer nach oben ******* */
+
+header{
+    margin: 20px 40px 60px 40px;
+}
+
+nav{ /* ? das Logo & Links sollen ebeneinander stehen  */
+    display: flex; /* ** setzte einen Container in einen flexiblen Layoutkontext  */
+    align-items: center; /* ** zentriert Flex-Elemente vertikal ** */
+    justify-content:space-between; /* ** verfügbare Platz wird gleichmäßig zwischen den Elementen verteilt ** */
+    /* justify-content: space-around; */  /* ** der verfügbare Platz gleichmäßig zwischen den Elementen aufgeteilt ** */
+    /* justify-content: space-evenly; */ /* ** der verfügbare Platz gleichmäßig zwischen den Elementen und am Anfang und am Ende der Zeile aufgeteilt ** */
+    /* justify-content: flex-start; */ /* ** Default ** */
+    /* justify-content: flex-end; */ /* ** Kommt ans Ende des Container ** */
+}
+
+h2{    
+    margin-left:20px ;
+}
+
+nav section a{
+    padding: 15px;
+    color: black;
+}
+
+/* ! Flex aling-item */
+
+main{
+    margin: 0 40px;
+}
+h1{
+    margin-bottom: 20px;
+}
+
+.graffiti{
+    display: flex;
+    align-items: center; /* *vertikal in der MItte des Containers ausgerichtet */
+    margin-bottom: 30px;
+    /* align-items: flex-start; */ /* * vertikal am oberen Rand des Containers ausgerichtet */
+    /* align-items: flex-end; */ /* * am unteren Rand des Container ausgerichtet */
+}
+
+.graffiti img{
+    max-width: 50vw;
+}
+
+/* ! Flex aling-item/ Baseline */
+
+
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline; /* *wird an der Grundlinie (Baseline) vom Text in einem Container ausgerichtet */
+}
+
+.flex-item{
+    background-color: lightblue;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* ! flex-direction */
+
+.kategorie {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse; /* * Elemnte werden umgekehrt horizontal angeordnet */
+    /* flex-direction: column */; /* * Elmente werden vertikal angeornet */
+    /* flex-direction: column-reverse; */ /* * Elemnte werden umgekehrt vertikal angeordnet */
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin-bottom: 30px;
+}
+
+.kategorie a{
+    padding: 10px;
+    color: blueviolet;
+}
+
+/* ! flexbox wrap  */
+
+.box{
+    row-gap:20px;
+    column-gap: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box article{
+    background-color: violet;
+    text-align: center;
+    border-radius: 30px;
+    padding: 30px;
+    min-height: 30vh;
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+} 
+
+/* ! order */
+/* ? order platziert jedes einzelne Element einer Flexbox in ein Feld der Wahl, ohne dabei die Reihenfolge des Inhalts im Markup zu ändern. */
+
+.box article:nth-of-type(1){
+    order: 1;
+    color: antiquewhite;
+}
+.box article:nth-of-type(2){
+    order: 3;
+    color: rgb(21, 0, 255);
+}
+.box article:nth-of-type(3){
+    order: 2;
+    color: rgb(0, 153, 255);
+}

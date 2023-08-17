@@ -1,0 +1,24 @@
+html {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.gallery {
+  margin-top: 5vw;
+  margin-left: 25vw;
+  width: 850px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.gallery img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
